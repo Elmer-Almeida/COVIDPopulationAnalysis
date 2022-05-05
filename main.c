@@ -19,16 +19,16 @@
 int main() {
   int userChoice;                           // user choice for menu
   household itemHead = generateHousehold(); // create first household item
-  Node *head = makeNode(itemHead); // add the first created household to the -
+  Node *head = makeNode(itemHead); // add the first created household to the
                                    // head of the linked list
 
   // add randomized data to the linked list
   for (int household_ctr = 1; household_ctr < HOUSEHOLD_LIMIT;
        household_ctr++) {
-    household item =
-        generateHousehold(); // generate a new household with randomized data
-    addNode(&head,
-            item); // add the new randomized data household to the linked list
+    // generate a new household with randomized data
+    household item = generateHousehold();
+    // add the new randomized data household to the linked list
+    addNode(&head, item);
   }
 
   // print linked list data
